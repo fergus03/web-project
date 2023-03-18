@@ -1,1 +1,1 @@
-Project name: WellnessWise
+Project name:  WellnessWise
