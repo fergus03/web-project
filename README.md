@@ -1,1 +1,1 @@
-# web-project
+Project name: WellnessWise
