@@ -1,0 +1,139 @@
+.main .content{
+  padding-left: 100px;
+  padding-top: 10px;
+}
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.content a button{
+  max-width: 216px;
+  width: 100%;
+  background-color: #b1c868;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 1rem 2rem;
+  border:none;
+  display: inline-block;
+  cursor: pointer;
+}
+.content h1{
+  color: #273204;
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+.content h1 #wellnesWise{
+  color: #B1C868;
+  font-size: 60px;
+  text-align: center;
+}
+
+.slider {
+  height: 90vh;
+  overflow: hidden;
+  padding-left: 70px;
+}
+
+.slide-wrapper {
+  height: 450%;
+  animation: slide 10s linear infinite;
+}
+
+.slide-wrapper img {
+  height: 50%;
+  display: block;
+  margin: auto;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+
+/*
+SECOND - PAGE
+*/
+.second-page{
+  background-color: #88b969;
+  padding: 81px 0 112px;
+  height: 787.26px;
+  width: 1519.2px;
+}
+.container{
+  height: 401.26px;
+  width: 1230px ;
+  align-items: center!important;
+  display: flex;
+  margin-top: 120px;
+  margin-left: -30px;
+}
+#center{
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  text-align: right;
+  display: flex;
+}
+#text{
+  height: 272px;
+  width: 585px;
+  margin-top: -100px;
+}
+.welcome-text{
+  height: 150px;
+  width: 650px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  font-family: Roboto, sans-serif;
+  padding: 0px 0px 24px;
+  margin-left: 240px;
+  color: #fff6ed;
+}
+
+.welcome-p{
+  font-size: 18px;
+  line-height: 24px;
+  height: 100px;
+  width: 570px;
+  margin-left: 240px;
+  margin-top: -150px;
+  color: #ddff80;
+  font-style: italic;
+  font-family: sans-serif	;
+  font-weight: 600;
+}
+.container-ended{
+  font: 16px Inter, sans-serif;
+  position: relative;
+  margin-left: 220px;
+  margin-top: 100px;
+  font-style: normal;
+}
+b{
+  color: #d7f57f;
+
+}
+.item{
+  text-align: left;
+  align-items: center;
+  display: inline-block;
+  margin-right: 130px;
+  color: #fff6ed;
+}
+.smaller{
+  width: 301px;
+}
+
+
+

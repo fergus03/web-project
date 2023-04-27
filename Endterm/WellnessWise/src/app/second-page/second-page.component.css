@@ -1,0 +1,22 @@
+.all-page{
+  color: #f3e7d1;
+  padding: 81px 0 112px;
+  height: 787.26px;
+  width: 1519.2px;
+}
+.container{
+  max-width: 1248px;
+  padding-left: 24px;
+  padding-right: 24px;
+  height: 594.26px;
+  width: 1248px ;
+}
+#center{
+  align-items: center!important;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+
+}
+

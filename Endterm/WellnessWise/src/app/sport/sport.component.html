@@ -1,0 +1,15 @@
+<body>
+<section class="programs">
+  <h2>Workouts</h2>
+  <ul class="program-list">
+    <li *ngFor="let sportVideo of sportVideos">
+      <h3>{{sportVideo.title}}</h3>
+      <a href="{{sportVideo.link}}">
+        <img src="{{sportVideo.image}}">
+      </a>
+    </li>
+  </ul>
+</section>
+</body>
+
+

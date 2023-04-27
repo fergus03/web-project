@@ -1,0 +1,130 @@
+
+.day-with-wellness {
+  background-color: #bffa8f;
+  padding: 112px 0;
+  display: block;
+  font: inherit;
+  margin-top: -5%;
+
+}
+.container {
+  max-width: 1248px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: block;
+  margin-left: 7.1%;
+}
+
+h3 {
+  padding-bottom: 16px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #ffffff;
+}
+
+body {
+  color: #fffbf3;
+}
+
+.subheader {
+  font-weight: 600;
+  padding-bottom: 40px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: black;
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.clickable {
+  background-color: #f7efe1;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 8px;
+  width: 300px;
+  list-style: none;
+}
+
+.time:hover {
+  color: #52ff35;
+}
+
+.time {
+  background-color: #3cb726;
+  color: #fff;
+  border-radius: 8px;
+  display: block;
+  font-size: 20px;
+  height: auto;
+  opacity: 1;
+  padding: 8px 8px;
+  width: auto;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.3s ease-in-out;
+  margin-right: 12px;
+  border-color: #3cb726;
+  list-style: none;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 7%;
+}
+.menu-item-description {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.menu-item{
+  padding: 15px;
+  background-color: white;
+  margin-right: 10px;
+  border-radius: 5px;
+  width: 29%;
+}
+.menu-item-name{
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 8px;
+  line-height: 24px;
+}
+.nutrients{
+  font-size: 14px;
+  padding: 0 8px;
+  line-height: 24px;
+  margin-top: 20px;
+  padding-left: 3px;
+}
+.menu-item-image{
+  min-width: 50px;
+  min-height: 70px;
+  max-width: 113px;
+  max-height: 300px;
+}
+.title{
+  font-weight: 600;
+}
+.kaspi{
+  padding: 8px 8px;
+  font-size: 15px;
+  margin-left: 0px;
+  background-color:red;
+  border: 2px solid darkred;
+  border-radius: 3px;
+}
+.kaspi a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}

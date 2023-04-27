@@ -1,0 +1,23 @@
+<section class="day-with-wellness">
+  <div class="container">
+    <h3>{{skinType.name}} type</h3>
+    <p class="subheader">Choose us for the perfect skincare!</p>
+    <div class="meal-preview">
+      <div class="pagination-wrapper">
+        <div *ngFor="let productType of productTypes">
+          <span class="time" (click)="getProducts(productType.id)"> {{productType.name}}</span>
+        </div>
+      </div>
+      <div class="menu">
+        <div  class="menu-item" *ngFor="let product of products">
+          <p class="menu-item-name">{{product.title}}</p>
+          <img class="menu-item-image" src="{{product.image_link}}">
+          <p class="nutrients"> {{product.description}}</p>
+          <button  class="kaspi">
+            <a href="{{product.link}}" target="_blank">KASPI</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+<section class="day-with-wellness">
+  <div class="container">
+    <h3>A Day With WellnessWise</h3>
+    <p class="subheader">Improve your health by eating the foods you love.</p>
+    <div class="meal-preview">
+      <div class="pagination-wrapper">
+        <div *ngFor="let mealTime of mealTimes ">
+          <span class="time" (click)="getMealsByMealTime(mealTime.id)"> {{mealTime.name}}</span>
+        </div>
+      </div>
+      <div class="menu">
+          <div  class="menu-item" *ngFor="let meal of meals">
+            <p class="menu-item-name">{{meal.title}}</p>
+            <img class="menu-item-image" src="{{meal.image_url}}">
+            <p class="nutrients"> {{meal.description}}</p>
+            <p class="title"> Ingredients: </p>
+            <p class="menu-item-description" [innerHTML]=meal.ingredients></p> <br>
+            <p class="title"> Instructions: </p>
+            <p class="menu-item-description" [innerHTML]=meal.instructions></p>
+
+      </div>
+    </div>
+  </div>
+  </div>
+</section>

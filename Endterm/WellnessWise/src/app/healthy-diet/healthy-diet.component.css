@@ -1,0 +1,33 @@
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #779645;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+  border-radius: 15px;
+}
+
+
+li {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  font-size: 22px;
+}
+
+li:hover {
+  background-color: #ddd;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+.video{
+  z-index: 2;
+}

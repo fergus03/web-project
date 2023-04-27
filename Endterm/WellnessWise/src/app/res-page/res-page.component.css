@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.square {
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  width: 320px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square a {
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  text-decoration: none;
+  color: #273204;
+  font-weight: 550;
+  font-family: Inter,sans-serif;
+}
+
+.square-left {
+  left: 10%;
+}
+
+.square-right {
+  right: 10%;
+}
