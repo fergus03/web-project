@@ -54,3 +54,18 @@ export interface SportVideo {
   link: string;
   image: string;
 }
+export interface AuthToken {
+  access : string;
+
+  refresh:string;
+}
+export interface SignUpToken {
+  username: string;
+  password: string;
+  email: string;
+};
+export interface User{
+  id: number,
+  username: string,
+  email: string
+}

@@ -1,34 +1,39 @@
-<div class="sign-in-page">
-  <div class="sign-in-form-container">
-    <p class="login-text">Login</p>
-    <form>
-        <div class="field-wrapper">
-          <label for="email" class="input-label">Email address</label>
-          <div class="input-wrapper">
-            <div class="input-container">
-              <input class="input" type="email" placeholder="Email address">
+<ng-container *ngIf="!authService.isLoggedIn()">
+  <div class="sign-in-page" >
+    <div class="sign-in-form-container">
+      <p class="login-text">Login</p>
+      <form>
+          <div class="field-wrapper">
+            <label for="username" class="input-label">Username</label>
+            <div class="input-wrapper">
+              <div class="input-container">
+                <input class="input" type="text" placeholder="Username" [(ngModel)]="username" required name="username">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="field-wrapper">
-          <label for="password" class="input-label">Password</label>
-          <div class="input-wrapper">
-            <div class="input-container">
-              <input class="input" type="password" placeholder="Password">
+          <div class="field-wrapper">
+            <label for="password" class="input-label">Password</label>
+            <div class="input-wrapper">
+              <div class="input-container">
+                <input class="input" type="password" placeholder="Password" [(ngModel)]="password" required name="password">
+              </div>
             </div>
           </div>
-        </div>
-        <button type="submit" class="login-button">Log in</button>
-      </form>
-    <div class="to-signup">
-      <p>New here?</p>
-      <a routerLink="">Sign Up</a>
-    </div>
+        <button type="submit" class="login-button" (click)="login()"
+                >Log In</button>
+        </form>
+      <div class="to-signup">
+        <p>New here?</p>
+        <a routerLink="">Sign Up</a>
+      </div>
 
-  </div>
-  <div class="photo-section">
-    <div class="photo-container">
-      <img src="assets/loginimg.png">
+    </div>
+    <div class="photo-section">
+      <div class="photo-container">
+        <img src="assets/loginimg.png">
+      </div>
     </div>
   </div>
-</div>
+</ng-container>
+<ng-container *ngIf="authService.isLoggedIn()"  ><app-res-page></app-res-page></ng-container>
+

@@ -1,41 +1,33 @@
-<div class="sign-in-page">
+ <div class="sign-in-page">
   <div class="sign-in-form-container">
     <p class="login-text">Start your journey!</p>
     <form>
       <div class="field-wrapper">
-        <label for="last_name" class="input-label">Last name </label>
+        <label class="input-label"   >Username</label>
         <div class="input-wrapper">
           <div class="input-container">
-            <input class="input" placeholder="Last name">
+            <input class="input"  placeholder="Username" [(ngModel)]="username" name="username" required>
           </div>
         </div>
       </div>
       <div class="field-wrapper">
-        <label for="first_name" class="input-label">First name</label>
+        <label  class="input-label" >Email</label>
         <div class="input-wrapper">
           <div class="input-container">
-            <input class="input"  placeholder="First name">
+            <input class="input" type="email" [(ngModel)]="email" placeholder="Email"  name="email" required>
           </div>
         </div>
       </div>
       <div class="field-wrapper">
-        <label for="email" class="input-label">Email</label>
+        <label  class="input-label"  >Password</label>
         <div class="input-wrapper">
           <div class="input-container">
-            <input class="input" type="email" placeholder="Email">
+            <input class="input" type="password"   [(ngModel)]="password" placeholder="Password" name="password" required>
           </div>
         </div>
       </div>
-      <div class="field-wrapper">
-        <label for="password" class="input-label">Password</label>
-        <div class="input-wrapper">
-          <div class="input-container">
-            <input class="input" type="password" placeholder="Password">
-          </div>
-        </div>
-      </div>
-      <button type="submit" class="login-button"><a routerLink="res-page">Sign up</a></button>
+      <button type="submit" class="login-button" (click)="signUp()">Sign up</button>
     </form>
 
   </div>
-</div>
+  </div>

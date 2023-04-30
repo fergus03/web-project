@@ -3,13 +3,14 @@ ul {
   justify-content: center;
   align-items: center;
   list-style-type: none;
-  margin: 0;
   padding: 0;
-  background-color: #779645;
+  background-color: #94e16e;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 2px 2px rgba(0,0,0,0.1);
   border-radius: 15px;
+  width: 70%;
+  margin-top: -20%;
 }
 
 
@@ -22,12 +23,117 @@ li {
 
 li:hover {
   background-color: #ddd;
+  border-radius: 10px;
 }
 
 a {
   text-decoration: none;
   color: white;
 }
-.video{
-  z-index: 2;
+
+.all{
+  background-image: linear-gradient(
+    to bottom right,
+    #a0fe91,
+    #99f9a6,
+    #edf363,
+    #e0d378,
+    #e8e59b,
+    #fcf989
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.ball {
+  animation: float 3.5s ease-in-out infinite;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  margin-top: 7%;
+  background: radial-gradient(
+    circle at 75% 30%,
+    white 5px,
+    aqua 8%,
+    darkblue 60%,
+    aqua 100%
+  );
+  box-shadow: inset 0 0 20px #fff, inset 10px 0 46px #eaf5fc,
+  inset 88px 0px 60px #b3ea78, inset -20px -60px 100px #fde9ea,
+  inset 0 50px 140px #fde9ea, 0 0 90px #fff;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-80px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.shadow {
+  background: #94f55e;
+  width: 150px;
+  height: 40px;
+  top: 70%;
+  animation: expand 4s infinite;
+  position: absolute;
+  border-radius: 50%;
+  margin-top: 7%;
+}
+@keyframes expand {
+  0%,
+  100% {
+    transform: scale(0.5);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .ball {
+    animation: float 4.5s ease-in-out infinite;
+    height: 120px;
+    width: 120px;
+
+    background: radial-gradient(
+      circle at 65% 35%,
+      white 5px,
+      aqua 15%,
+      darkblue 50%,
+      aqua 100%
+    );
+    box-shadow: inset 0 -20px 30px #fff, inset 40px 0 46px #eaf5fc,
+    inset 58px 0px 60px #c2d8fe, inset -8px -30px 100px #fde9ea,
+    inset 0 20px 110px #fde9ea, 0 0 90px #fff;
+  }
+  .shadow {
+    width: 90px;
+    height: 20px;
+    top: 78%;
+    animation: expand 5s infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-50px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
 }

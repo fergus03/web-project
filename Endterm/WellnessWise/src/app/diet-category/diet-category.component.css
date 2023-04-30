@@ -1,11 +1,9 @@
 
 .day-with-wellness {
-  background-color: #bffa8f;
   padding: 112px 0;
   display: block;
   font: inherit;
-  margin-top: -5%;
-
+  margin-top: -55%;
 }
 .container {
   max-width: 1248px;
@@ -13,49 +11,50 @@
   padding-right: 24px;
   display: block;
   margin-left: 7.1%;
+  position: relative;
 }
 
 h3 {
   padding-bottom: 16px;
   text-align: center;
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 50px;
+  font-weight: 800;
   line-height: 56px;
   color: #ffffff;
+  margin-top: -5px;
 }
-
+#video{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
 body {
-  color: #fffbf3;
+
 }
 
 .subheader {
-  font-weight: 600;
+  font-weight: 1000;
   padding-bottom: 40px;
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 24px;
   color: black;
+  margin-top: -40px;
 }
 
 .pagination-wrapper {
   display: flex;
   justify-content: center;
   margin-bottom: 32px;
+  margin-left: 5%;
 }
 
-.clickable {
-  background-color: #f7efe1;
-  border-radius: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 8px;
-  width: 300px;
-  list-style: none;
-}
 
 .time:hover {
-  color: #52ff35;
+  color: #81fa6d;
 }
 
 .time {
@@ -63,17 +62,17 @@ body {
   color: #fff;
   border-radius: 8px;
   display: block;
-  font-size: 14px;
+  font-size: 18px;
   height: auto;
   opacity: 1;
-  padding: 4px 8px;
-  width: auto;
+  padding: 14px 18px;
   cursor: pointer;
   text-align: left;
   transition: color 0.3s ease-in-out;
   margin-right: 12px;
   border-color: #3cb726;
   list-style: none;
+  margin-top: -40px;
 }
 
 .menu {

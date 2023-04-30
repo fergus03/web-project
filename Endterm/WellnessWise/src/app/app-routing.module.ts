@@ -15,10 +15,16 @@ import {SkincareProductComponent} from "./skincare-product/skincare-product.comp
 
 
 const routes: Routes = [
-  {path:'login',component:LogInComponent},
   {path:'aboutus',component:AboutusComponent},
   {path:'review', component:ReviewComponent},
   {path:'contact', component:ContactComponent},
+  {path:'login',component:LogInComponent},
+  {path:'login/healthy-diet', component:HealthyDietComponent},
+  {path:'login/healthy-diet/:id', component:DietCategoryComponent},
+  {path:'login/skin-care', component:SkinCareComponent},
+  {path:'login/skin-care/:id',component:SkincareProductComponent},
+  {path:'login/sport', component:SportComponent},
+
   {path:'start-my-journey', component:StartMyJourneyComponent},
   {path:'start-my-journey/res-page', component:ResPageComponent},
   {path:'start-my-journey/res-page/healthy-diet', component:HealthyDietComponent},
