@@ -18,6 +18,7 @@ import { DietCategoryComponent } from './diet-category/diet-category.component';
 import { MealsComponent } from './meals/meals.component';
 import { SkincareProductComponent } from './skincare-product/skincare-product.component';
 import { RouterModule } from '@angular/router';
+import {ReviewComponent} from "./review/review.component";
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { RouterModule } from '@angular/router';
     MealsComponent,
     SkinCareComponent,
     SkincareProductComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,

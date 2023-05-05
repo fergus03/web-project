@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Meals, DietCategory, MealTime, SkincareProduct, SportVideo, SkinType, ProductType
+from .models import Meals, DietCategory, MealTime, SkincareProduct, SportVideo, SkinType, ProductType, Review
 
 
 class DietCategorySerializer(serializers.Serializer):
@@ -60,3 +60,8 @@ class SportVideoSerializer(serializers.ModelSerializer):
     class Meta:
         model = SportVideo
         fields = ['id', 'title', 'link', 'image']
+
+class ReviewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Review
+        fields = ('id', 'description', 'username')

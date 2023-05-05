@@ -68,24 +68,7 @@
   font-weight: 700;
   cursor: pointer;
 }
-.to-signup{
-  display: flex;
-  align-items: center;
-  padding: 1.5rem 0px 0.5rem;
-}
-.to-signup p{
-  text-align: left;
-  font-size: 0.75rem;
-  line-height: 1.5;
-  color: rgb(128, 88, 98);
-  padding: 0px 0.5rem 0px 0px;
-}
-.to-signup a {
-  color: #B1C868;
-  font-weight: 700;
-  font-size: 0.75rem;
-  text-decoration: none;
-}
+
 .photo-section{
   display: flex;
   -webkit-box-align: center;

@@ -1,4 +1,5 @@
- <div class="sign-in-page">
+<ng-container *ngIf="!isRegistered">
+<div class="sign-in-page">
   <div class="sign-in-form-container">
     <p class="login-text">Start your journey!</p>
     <form>
@@ -31,3 +32,7 @@
 
   </div>
   </div>
+</ng-container>
+<ng-container *ngIf="isRegistered">
+  <app-log-in></app-log-in>
+</ng-container>

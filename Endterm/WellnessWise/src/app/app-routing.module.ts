@@ -26,12 +26,11 @@ const routes: Routes = [
   {path:'login/sport', component:SportComponent},
 
   {path:'start-my-journey', component:StartMyJourneyComponent},
-  {path:'start-my-journey/res-page', component:ResPageComponent},
-  {path:'start-my-journey/res-page/healthy-diet', component:HealthyDietComponent},
-  {path:'start-my-journey/res-page/healthy-diet/:id', component:DietCategoryComponent},
-  {path:'start-my-journey/res-page/skin-care', component:SkinCareComponent},
-  {path:'start-my-journey/res-page/skin-care/:id',component:SkincareProductComponent},
-  {path:'start-my-journey/res-page/sport', component:SportComponent},
+  {path:'start-my-journey/healthy-diet', component:HealthyDietComponent},
+  {path:'start-my-journey/healthy-diet/:id', component:DietCategoryComponent},
+  {path:'start-my-journey/skin-care', component:SkinCareComponent},
+  {path:'start-my-journey/skin-care/:id',component:SkincareProductComponent},
+  {path:'start-my-journey/sport', component:SportComponent},
   {path:'',redirectTo:'aboutus',pathMatch:"full"},
 ];
 

@@ -1,10 +1,15 @@
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.response import Response
+from django.shortcuts import Http404
 from rest_framework.decorators import api_view
 from rest_framework.views import APIView
-from .models import DietCategory, MealTime, Meals, SkinType, SkincareProduct, SportVideo, ProductType
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework import status
+from rest_framework.permissions import IsAuthenticated
+from .models import DietCategory, MealTime, Meals, SkinType, SkincareProduct, SportVideo, ProductType, Review
 from .serializers import DietCategorySerializer, MealTimeSerializer, MealsSerializer, SkinTypeSerializer, \
-    SkincareProductSerializer, SportVideoSerializer, SkincareProductTypeSerializer
+    SkincareProductSerializer, SportVideoSerializer, SkincareProductTypeSerializer, ReviewSerializer
+
 
 
 @csrf_exempt
@@ -95,3 +100,42 @@ class SportVideoAPIView(APIView):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors)
+
+
+class ReviewListAPIView(APIView):
+    def get(self, request):
+        reviews = Review.objects.all()
+        serializer = ReviewSerializer(reviews, many=True)
+        return Response(serializer.data)
+
+    def post(self, request):
+        serializer = ReviewSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class ReviewDetailAPIView(APIView):
+    def get_object(self, review_id):
+        try:
+            return Review.objects.get(pk=review_id)
+        except Review.DoesNotExist as e:
+            return Response(str(e), status=status.HTTP_400_BAD_REQUEST)
+
+    def get(self, request, review_id):
+        instance = self.get_object(review_id)
+        serializer = ReviewSerializer(instance)
+        return Response(serializer.data)
+
+    def put(self, request, review_id):
+        instance = self.get_object(review_id)
+        serializer = ReviewSerializer(instance=instance, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, review_id):
+        instance = self.get_object(review_id)
+        instance.delete()
+        return Response({'deleted': True})

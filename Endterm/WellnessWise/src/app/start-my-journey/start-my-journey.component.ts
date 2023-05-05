@@ -12,11 +12,13 @@ export class StartMyJourneyComponent  implements  OnInit{
   password:string;
   email:string;
 
+  isRegistered:boolean;
 
   constructor(public authService:AuthService) {
     this.username=""
     this.password=""
     this.email=""
+    this.isRegistered = false
   }
   ngOnInit(){
   }
@@ -24,6 +26,7 @@ export class StartMyJourneyComponent  implements  OnInit{
     if (this.username &&  this.email && this.password) {
       this.authService.signUp(this.username,this.email, this.password).subscribe((data) => {
         console.log(data);
+        this.isRegistered = true;
       });
     }
   }

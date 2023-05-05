@@ -12,8 +12,7 @@ export class SportVideoService {
   constructor(private http: HttpClient) { }
 
   getSportVideos(): Observable<SportVideo[]> {
-    const token = localStorage.getItem('token');
-    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
-    return this.http.get<SportVideo[]>('http://127.0.0.1:8000/api/sport-videos/',{headers});
+
+    return this.http.get<SportVideo[]>('http://127.0.0.1:8000/api/sport-videos/',);
   }
 }

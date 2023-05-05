@@ -11,4 +11,6 @@ urlpatterns = [
     path('product-types/',views.ProductTypes.as_view()),
     path('skin-types/<int:skin_type_id>/product-types/<int:product_type_id>/',views.SkincareProductsAPIView.as_view()),
     path('sport-videos/', views.SportVideoAPIView.as_view()),
+    path('reviews/', views.ReviewListAPIView.as_view()),
+    path('reviews/<int:review_id>/', views.ReviewDetailAPIView.as_view()),
 ]

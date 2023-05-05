@@ -12,9 +12,8 @@ export class DietCategoryService {
   }
 
   getDietCategories(): Observable<DietCategory[]> {
-    const token = localStorage.getItem('token');
-    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
-    return this.http.get<DietCategory[]>('http://127.0.0.1:8000/api/diet-categories/',{headers});
+
+    return this.http.get<DietCategory[]>('http://127.0.0.1:8000/api/diet-categories/',);
   }
   getDietCategory(id :number): Observable<DietCategory> {
     return this.http.get<DietCategory>(`http://127.0.0.1:8000/api/diet-categories/${id}`);

@@ -1,6 +1,16 @@
 from django.db import models
-from django.urls import reverse
+from django.contrib.auth.models import User
 
+class Review(models.Model):
+    description = models.TextField()
+    username = models.CharField(max_length=255)
+
+    def __str__(self):
+        return f'{self.id}: {self.username}'
+
+    class Meta:
+        verbose_name = 'Review'
+        verbose_name_plural = 'Reviews'
 
 class DietCategory(models.Model):
     name = models.CharField(max_length=255)
@@ -51,7 +61,7 @@ class ProductType(models.Model):
 
 class SkincareProduct(models.Model):
     skin_type = models.ForeignKey(SkinType, on_delete=models.CASCADE)
-    product_type =  models.ForeignKey(ProductType,on_delete= models.CASCADE)
+    product_type = models.ForeignKey(ProductType,on_delete= models.CASCADE)
     title = models.CharField(max_length=255)
     description = models.TextField()
     image_link = models.CharField(max_length=255)
